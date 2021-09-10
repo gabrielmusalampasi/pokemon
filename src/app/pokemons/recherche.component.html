@@ -1,0 +1,18 @@
+<div class="row">
+  <div>
+      <div class="card-content">
+        <div>
+          <div class="card">
+            <a *ngFor="let pokemon of pokemons$ | async"
+               (click)="gotoDetail(pokemon)" class="collection-item">
+              {{ pokemon.name }}
+            </a>
+          </div>
+          <div class="input-field col s12">
+          <input id="rechercher" type="email" class="validate" #searchBox (keyup)="search(searchBox.value)">
+          <label for="rechercher">Rechercher</label>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
